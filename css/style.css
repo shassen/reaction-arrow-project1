@@ -1,12 +1,74 @@
 body {
     background-color: #606368;
     text-align: center;
+    height: 500px;
 }
 h1 {
     font-family: 'Russo One', sans-serif;
+    margin-right: 200px;
 }
+h1, nav {
+    display: inline;
+}
+
+nav {
+    margin-right: 180px;
+}
+
+@keyframes navigation {
+    0% {
+        transform: rotate(180deg);
+    }
+}
+#menu-button:hover {
+    animation: navigation 1s 1 forwards;
+}
+
+#root {
+    margin: 150px auto;
+}
+
+/* arrow positions */
+
+.arrows {
+    position: relative;
+    display: inline-block;
+}
+
+#up-arrow {
+    bottom: 80px;
+    left: 180px;
+}
+
+#down-arrow {
+    top: 60px;
+    left: -43px;
+}
+
+#left-arrow {
+    bottom: 10px;
+    right: 267px;
+}
+
+#right-arrow {
+    bottom: 10px;
+    left: 180px;
+}
+
+/* footer styling */
+
 a {
+    font-family: 'Russo One', sans-serif;
+    font-size: 15px;
+    letter-spacing: 5px;
     text-decoration: none;
     color: white;
 }
+footer a {
+    margin-right: 10px;
+}
+
+
+
+
 
