@@ -21,7 +21,7 @@ nav {
     }
 }
 #menu-button:hover {
-    animation: navigation 1s 1 forwards;
+    animation: navigation 1.5s 1;
 }
 
 #root {
@@ -55,6 +55,73 @@ nav {
     left: 180px;
 }
 
+/* hidden window styling -- w3schools.com helped here big time */
+
+.hidden-content {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(71, 31, 31, 0.3);
+}
+
+.content-container {
+    position: relative;
+    background-color: rgba(74, 88, 92, 0);
+    margin: auto;
+    padding: 0;
+    border: 3px solid white;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    border-radius: 30px;
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+.close {
+    color: white;
+    float: right;
+    font-size: 30px;
+    font-weight: bold;
+}
+.close:hover, .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.content-header {
+    padding: 2px 16px;
+    background-color: rgb(48, 44, 44);
+    color: white;
+    border-radius: 30px;
+}
+
+.content-body {
+    padding: 2px 16px;
+    text-align: left;
+    color: white;
+}
+
+/* hidden content animations */
+
+@-webkit-keyframes animatetop {
+    from { top: -300px; opacity: 0 }
+    to { top: 0; opacity: 1; }
+}
+
+@keyframes animatetop {
+    from { top: -300px; opacity: 0 }
+    to { top: 0; opacity: 1 }
+}
+
 /* footer styling */
 
 a {
@@ -67,6 +134,7 @@ a {
 footer a {
     margin-right: 10px;
 }
+
 
 
 
