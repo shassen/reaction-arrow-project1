@@ -3,7 +3,32 @@
 console.log('test');
 
 
+// game logic:
+
 const rootDiv = document.querySelector('#root');
+
+const arrowArr = [ { whiteUp: '../images/uparrow.png', redUp: '../images/reduparrow.png'},
+                   { whiteRight: '../images/rightarrow.png', redRight: '../images/redrightarrow.png' },
+                   { whiteDown: '../images/downarrow.png', redDown: '../images/reddownarrow.png' },
+                   { whiteLeft: '../images/leftarrow.png', redLeft: '../images/redleftarrow.png' } ];
+
+//stackoverflow help here:
+document.onkeydown = function(e) {
+    switch (e.keyCode) {
+        case 37:
+            console.log('left');
+            break;
+        case 38:
+            console.log('up');
+            break;
+        case 39:
+            console.log('right');
+            break;
+        case 40:
+            console.log('down');
+            break;
+    }
+};
 
 // add event listeners to img's
 const arrowCount = document.querySelectorAll('.arrows');
@@ -12,6 +37,19 @@ for (let i = 0; i < arrowCount.length; i += 1) {
         console.log(e.target);
     });
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

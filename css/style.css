@@ -6,6 +6,8 @@ body {
 h1 {
     font-family: 'Russo One', sans-serif;
     margin-right: 200px;
+    letter-spacing: 2px;
+    text-shadow: -2px 2px white;
 }
 h1, nav {
     display: inline;
@@ -130,6 +132,7 @@ a {
     letter-spacing: 5px;
     text-decoration: none;
     color: white;
+    text-shadow: -2px 2px black;
 }
 footer a {
     margin-right: 10px;
