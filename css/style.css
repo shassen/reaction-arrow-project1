@@ -13,6 +13,10 @@ h1, nav {
     display: inline;
 }
 
+header {
+    padding-top: 10px;
+}
+
 nav {
     margin-right: 180px;
 }

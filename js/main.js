@@ -1,5 +1,5 @@
 
-const arrowArr = [ { whiteUp: '../images/uparrow.png', redUp: '../images/reduparrow.png'},
+const arrowArr = [ { whiteUp: '../images/uparrow.png', redUp: '../images/reduparrow.png' },
                    { whiteRight: '../images/rightarrow.png', redRight: '../images/redrightarrow.png' },
                    { whiteDown: '../images/downarrow.png', redDown: '../images/reddownarrow.png' },
                    { whiteLeft: '../images/leftarrow.png', redLeft: '../images/redleftarrow.png' } ];
@@ -64,10 +64,12 @@ document.onclick = function(e) {
 }
 
 // right arrow functions and styling
+const rightRed = arrowArr.redRight;
 const startBody = document.querySelector('#start-body');
 rightArrow.onclick = function(e) {
     //window.xxxx to handle default behavior of directional keys
     e.preventDefault();
+    
     startWindow.style.display = "block";
     startBody.style.padding = "100px";
     rootDiv.style.opacity = "0";
@@ -84,20 +86,29 @@ startSpan.onclick = function() {
 
 //game logic
 
-
-const gameArrows = document.querySelectorAll('.game-arrows');
 let playing = false;
-let currentSeq = 0;
+let current = 0;
 let startTime = 30;
 let seq = [];
 
+// function shuffle(arrowArr) {
+//     let x, y, i;
+//     for (let i = 0; );
+// }
+
+
+
 function startGame() {
-    playing = true;
+    playing;
+    // for (let i = 0; i < arrowArr.length; i += 1) {}
+    highlight(current);
 
 }
 
 function handleKeyPress() {
-    if (!playing) return;
+    if (!playing) {
+        return startGame();
+    }
 }
 
 function nextInSeq() {
