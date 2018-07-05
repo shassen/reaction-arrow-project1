@@ -112,6 +112,10 @@ nav {
     color: white;
 }
 
+li {
+    padding-left: 10px;
+}
+
 /* hidden content animations */
 
 @-webkit-keyframes animatetop {
