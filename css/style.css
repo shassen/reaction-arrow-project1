@@ -38,7 +38,7 @@ nav {
 
 .arrows {
     position: relative;
-    display: inline-block;
+    display: inline;
 }
 
 #up-arrow {
@@ -82,7 +82,8 @@ nav {
     margin: auto;
     padding: 0;
     border: 3px solid white;
-    width: 80%;
+    width: 480px;
+    height: 400px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
     border-radius: 30px;
     -webkit-animation-name: animatetop;
@@ -118,6 +119,40 @@ nav {
 
 li {
     padding-left: 10px;
+}
+
+#img-up {
+    position: relative;
+    top: 40px;
+    height: 110px;
+    width: 120px;
+    margin: auto;
+    background-color: white;
+}
+#img-down {
+    position: relative;
+    margin: auto;
+    height: 110px;
+    width: 120px;
+    bottom: 40px;
+    background-color: white;
+}
+#img-right {
+    position: relative;
+    margin: auto;
+    height: 110px;
+    width: 120px;
+    left: 140px;
+    background-color: white;
+}
+#img-left {
+    position: relative;
+    height: 110px;
+    width: 120px;
+    margin: auto;
+    bottom: 220px;
+    right: 140px;
+    background-color: white;
 }
 
 /* hidden content animations */

@@ -39,6 +39,7 @@ const rootDiv = document.querySelector('#root');
 
 const hidContainer = document.querySelector('.content-container');
 const instructWindow = document.querySelector('#instructions');
+const instructContent = document.querySelector('#instruction-content');
 const leftArrow = document.querySelector('#left-arrow');
 const rightArrow = document.querySelector('#right-arrow');
 const downArrow = document.querySelector('#down-arrow');
@@ -48,6 +49,7 @@ const footer = document.querySelector('footer');
 // left arrow functions and styling
 leftArrow.onclick = function() {
     instructWindow.style.display = "block";
+    instructContent.style.height = "300px";
     rootDiv.style.opacity = "0";
 
 }
@@ -69,9 +71,7 @@ const startBody = document.querySelector('#start-body');
 rightArrow.onclick = function(e) {
     //window.xxxx to handle default behavior of directional keys
     e.preventDefault();
-    
     startWindow.style.display = "block";
-    startBody.style.padding = "100px";
     rootDiv.style.opacity = "0";
     footer.style.opacity = "0";
 }
