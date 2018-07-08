@@ -51,7 +51,7 @@ document.onclick = function(e) {
 const rightRed = arrowArr.redRight;
 const startBody = document.querySelector('#start-body');
 rightArrow.onclick = function(e) {
-    //window.xxxx to handle default behavior of directional keys
+    // window.xxxx to handle default behavior of directional keys
     e.preventDefault();
     startWindow.style.display = "block";
     rootDiv.style.opacity = "0";
