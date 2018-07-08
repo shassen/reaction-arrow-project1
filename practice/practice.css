@@ -3,6 +3,13 @@ body {
     height: 100%;
 }
 
+a {
+    text-decoration: none;
+}
+a:hover {
+    color: white;
+}
+
 .container {
     background-color: gray;
     height: 500px;
