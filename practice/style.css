@@ -1,0 +1,36 @@
+body {
+    background-color: gray;
+    height: 100%;
+}
+
+.container {
+    background-color: gray;
+    height: 500px;
+    width: 500px;
+    margin: auto;
+    text-align: center;
+}
+
+.arrows {
+    position: relative;
+    height: 130px;
+    width: 130px;
+}
+
+.vertical {
+    left: 190px;
+    top: 60px;
+}
+#right {
+    top: 60px;
+    left: 350px;
+}
+#left {
+    bottom: 200px;
+    left: 30px;
+}
+
+h2 {
+    text-align: center;
+}
+
