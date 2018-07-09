@@ -102,8 +102,8 @@ appendArrows(nextSequence());
 // function: check win/lose conditions
 function checkWin() {
     if (score >= 55 && lose < 5) {
-        alert('You speedy bastard! Nice work');
-    } else { alert('Come on, too slow. Refresh and try again..'); }
+        alert('Nice reaction time!');
+    } else { alert('Too slow, refresh and try again..'); }
 }
 
 // function: timer ---stackoverflow
@@ -118,13 +118,13 @@ function countdown() {
 }
 countdown();
 
-// function playGame() {
-//     if (playing === true) {
-//         countdown();
-//     } else {
-//         appendArrows(nextSequence());
-//     }
-// }
+function playGame() {
+    if (playing === true) {
+        countdown();
+    } else {
+        appendArrows(nextSequence());
+    }
+}
 // playGame();
 
 
