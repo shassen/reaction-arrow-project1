@@ -17,7 +17,7 @@ const winLoseStatment = document.querySelector('.win-lose');
 let timeLeft = 20;
 let timeInterval = setInterval(countdown, 1000);
 let score = 0;
-let win = 55;
+let win = 50;
 let lose = 0;
 let playing = false;
 
@@ -33,19 +33,19 @@ const checkKey = function(x) {
     document.onkeydown = function(e) {
         if (e.keyCode === 37 && x === 'left') {
             score += 1;
-            // scoreEl.innerHTML = 'correct: ' + score + '/55';
+            imgLeft.style.border = '2px solid red';
             appendArrows(nextSequence());
         } else if (e.keyCode === 38 && x === 'up') {
             score += 1;
-            // scoreEl.innerHTML = 'correct: ' + score + '/55';
+            imgUp.style.border = '2px solid red';
             appendArrows(nextSequence());
         } else if (e.keyCode === 39 && x === 'right') {
             score += 1;
-            // scoreEl.innerHTML = 'correct: ' + score + '/55';
+            imgRight.style.border = '2px solid red';
             appendArrows(nextSequence());
         } else if (e.keyCode === 40 && x === 'down') {
             score += 1;
-            // scoreEl.innerHTML = 'correct: ' + score + '/55';
+            imgDown.style.border = '2px solid red';
             appendArrows(nextSequence());
         } else {
             lose += 1;
@@ -92,12 +92,23 @@ function nextSequence() {
 }
 nextSequence();
 
-// function: show arrows to user
+// function: show arrows to user & remove border after keydow
 function appendArrows(x) {
     for (let i = 0; i < imgArray.length; i += 1) {
         imgArray[i].src = `images/${direction[i]}arrow.png`;
         if (x === direction[i]) {
             imgArray[i].src = `images/red${x}arrow.png`;
+        }
+    }
+    document.onkeyup = function(e) {
+        if (e.keyCode === 37) {
+            imgLeft.style.border = "";
+        } else if (e.keyCode === 38) {
+            imgUp.style.border = "";
+        } else if (e.keyCode === 39) {
+            imgRight.style.border = "";
+        } else if (e.keyCode === 40) {
+            imgDown.style.border = "";
         }
     }
     checkKey(x)
@@ -108,9 +119,9 @@ appendArrows(nextSequence());
 function checkWin() {
     gameOverWindow.style.display = "block";
     arrowDiv.style.opacity = "0";
-    scoreEl.innerHTML = 'correct: ' + score + '/55';
+    scoreEl.innerHTML = 'correct: ' + score + '/50';
     loseEl.innerHTML = 'incorrect: ' + lose + '/5';
-    if (score >= 55 && lose < 5) {
+    if (score >= 50 && lose < 5) {
         winLoseStatment.innerHTML = "Nice reaction time!"
     } else { winLoseStatment.innerHTML = "Keep practicing to get better!" }
 }
@@ -127,14 +138,9 @@ function countdown() {
 }
 // countdown();
 
-// function playGame() {
-//     if (playing === true) {
-//         countdown();
-//     } else {
-//         appendArrows(nextSequence());
-//     }
-// }
-// playGame();
+
+
+
 
 
 
