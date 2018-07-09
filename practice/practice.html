@@ -11,7 +11,7 @@
 
     <a href="../index.html"><h2>back to homepage</h2></a>
 
-    <div class="container">
+    <div class="container" id="arrow-div">
         <div class="arrows vertical" id="up"></div>
         <div class="arrows horizontal" id="right"></div>
         <div class="arrows vertical" id="down"></div>
@@ -19,12 +19,23 @@
     </div>
 
     <h2 id="timer"></h2>
-    <h2 id="score"></h2>
-    <h2 id="lose"></h2>
+
 
     <div class="game-over">
-        <h2 id="score"></h2>
-        <h2 id="lose"></h2>
+
+        <div class="game-container">
+            <div class="game-header">
+                <a href="../index.html" class="close">&times;</a>
+                <h2>Game Stats:</h2>
+            </div>
+            <h2 class="win-lose"></p>
+            <h3 id="score"></h2>
+            <h3 id="lose"></h2>
+        </div>
+        <div class="game-stats">
+            
+        </div>
+        
     </div>
 
 <script src="practice.js"></script> 

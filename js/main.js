@@ -31,7 +31,6 @@ leftArrow.onclick = function() {
     instructWindow.style.display = "block";
     instructContent.style.height = "300px";
     rootDiv.style.opacity = "0";
-
 }
 const span = document.querySelector('.close');
 span.onclick = function() {
@@ -51,9 +50,19 @@ startSpan.onclick = function() {
     startWindow.style.display = "none";
     rootDiv.style.opacity = "1";
     footer.style.opacity = "1";
-    // timer.innerText = "Time: " + Date.now();
-    
 }
+
+const rightRed = arrowArr.redRight;
+const startBody = document.querySelector('#start-body');
+rightArrow.addEventListener('click', (e) => {
+    // window.xxxx to handle default behavior of directional keys
+    // e.preventDefault();
+    console.log(e.target);
+    timeInterval = setInterval(countdown, 1000)
+    startWindow.style.display = "block";
+    rootDiv.style.opacity = "0";
+    footer.style.opacity = "0";
+});
 
 
 // Reaction Arrow Game:
@@ -73,7 +82,7 @@ const key = [ 38, 39, 40, 37 ];
 
 // win or lose variables and conditions
 let timeLeft = 20;
-let timeInterval = setInterval(countdown, 1000);
+let timeInterval;
 let score = 0;
 let win = 55;
 let lose = 0;
@@ -139,7 +148,7 @@ const imgArray = [ imgUp, imgRight, imgDown, imgLeft ];
 
 // function: next sequence
 function nextSequence() {
-        return gameSequence.shift()
+        return gameSequence.shift();
 }
 nextSequence();
 
@@ -151,15 +160,16 @@ function appendArrows(x) {
             imgArray[i].src = `images/red${x}arrow.png`;
         }
     }
-    checkKey(x)
+    checkKey(x);
 }
 appendArrows(nextSequence());
 
 // function: check win/lose conditions
 function checkWin() {
     if (score >= 55 && lose < 5) {
-        alert('Nice reaction time!');
-    } else { alert('Too slow, refresh and try again..'); }
+        // alert('Nice reaction time!');
+    // } else { alert('Too slow, refresh and try again..'); }
+    }
 }
 
 // function: timer ---stackoverflow
@@ -175,17 +185,7 @@ function countdown() {
 }
 // countdown();
 
-const rightRed = arrowArr.redRight;
-const startBody = document.querySelector('#start-body');
-rightArrow.addEventListener('click', (e) => {
-    // window.xxxx to handle default behavior of directional keys
-    // e.preventDefault();
-    console.log(e.target);
-    playing = true;
-    startWindow.style.display = "block";
-    rootDiv.style.opacity = "0";
-    footer.style.opacity = "0";
-});
+
 
 // function playGame() {
 //     if (playing === true) {

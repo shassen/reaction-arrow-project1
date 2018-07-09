@@ -6,9 +6,12 @@ const divElU = document.querySelector('#up');
 const divElR = document.querySelector('#right');
 const divElD = document.querySelector('#down');
 const divElL = document.querySelector('#left');
+const arrowDiv = document.querySelector('#arrow-div');
 const timerEl = document.querySelector('#timer');
 const scoreEl = document.querySelector('#score');
 const loseEl = document.querySelector('#lose');
+const gameOverWindow = document.querySelector('.game-over');
+const winLoseStatment = document.querySelector('.win-lose');
 
 // win or lose variables and conditions
 let timeLeft = 20;
@@ -30,23 +33,25 @@ const checkKey = function(x) {
     document.onkeydown = function(e) {
         if (e.keyCode === 37 && x === 'left') {
             score += 1;
-            scoreEl.innerHTML = 'correct: ' + score + '/55';
+            // scoreEl.innerHTML = 'correct: ' + score + '/55';
             appendArrows(nextSequence());
         } else if (e.keyCode === 38 && x === 'up') {
             score += 1;
-            scoreEl.innerHTML = 'correct: ' + score + '/55';
+            // scoreEl.innerHTML = 'correct: ' + score + '/55';
             appendArrows(nextSequence());
         } else if (e.keyCode === 39 && x === 'right') {
             score += 1;
-            scoreEl.innerHTML = 'correct: ' + score + '/55';
+            // scoreEl.innerHTML = 'correct: ' + score + '/55';
             appendArrows(nextSequence());
         } else if (e.keyCode === 40 && x === 'down') {
             score += 1;
-            scoreEl.innerHTML = 'correct: ' + score + '/55';
+            // scoreEl.innerHTML = 'correct: ' + score + '/55';
             appendArrows(nextSequence());
         } else {
             lose += 1;
-            loseEl.innerHTML = 'incorrect: ' + lose + '/5';
+            if (lose === 5) {
+                checkWin()
+            }
         }
     }
 }
@@ -101,9 +106,13 @@ appendArrows(nextSequence());
 
 // function: check win/lose conditions
 function checkWin() {
+    gameOverWindow.style.display = "block";
+    arrowDiv.style.opacity = "0";
+    scoreEl.innerHTML = 'correct: ' + score + '/55';
+    loseEl.innerHTML = 'incorrect: ' + lose + '/5';
     if (score >= 55 && lose < 5) {
-        alert('Nice reaction time!');
-    } else { alert('Too slow, refresh and try again..'); }
+        winLoseStatment.innerHTML = "Nice reaction time!"
+    } else { winLoseStatment.innerHTML = "Keep practicing to get better!" }
 }
 
 // function: timer ---stackoverflow
@@ -116,15 +125,15 @@ function countdown() {
         timeLeft -= 1;
     }
 }
-countdown();
+// countdown();
 
-function playGame() {
-    if (playing === true) {
-        countdown();
-    } else {
-        appendArrows(nextSequence());
-    }
-}
+// function playGame() {
+//     if (playing === true) {
+//         countdown();
+//     } else {
+//         appendArrows(nextSequence());
+//     }
+// }
 // playGame();
 
 
