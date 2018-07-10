@@ -9,6 +9,8 @@ As a new developer, I wanted to build something both challenging (for my skill l
 
 ## Play
 
+[Link to Reaction Arrow!](https://shassen.github.io/reaction-arrow-project1/)
+
 1. Start by reading the instructions of RA (click the left arrow on the landing page).
 2. When you're ready to play, click the down arrow on the landing page and the game will begin immediately.
 3. When the time runs out, you will see your score.
