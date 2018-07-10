@@ -15,8 +15,8 @@ As a new developer, I wanted to build something both challenging (for my skill l
 
 ## Features
 
-In later builds, the game will play in a Modal window accessed by click the right arrow. For now, click the down arrow to navigate to the game page. Later builds will also include three difficulty levels allowing arrow combinations and calculated reaction times. I would also like to introduce a leaderboard and user profiles.
+In later builds, the game will play in a Modal window accessed by clicking the right arrow. For now, click the down arrow to navigate to the game page. Later builds will also include three difficulty levels allowing arrow combinations and calculated reaction times. I would also like to introduce a leaderboard and user profiles.
 
-© Shawn Hassen
+### created by: Shawn Hassen
 
 
