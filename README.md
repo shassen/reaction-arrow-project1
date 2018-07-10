@@ -1,11 +1,20 @@
 
-
 # Reaction Arrow (RA)
 
-Test your reaction time using your arrow keys. Click the down arrrow on the landing page to get started.
+Test out your reaction time Reaction Arrow!
 
-## Why Did I Choose Reaction Arrow You Ask??
+## Why I Chose Reaction Arrow
 
-As a new developer, I wanted to build something both challenging (for my skill level) and fun to play. RA doesn't just test your reactions, it can you help improve them with continued play (I should probably conduct tests before saying that, but who cares!). 
+As a new developer, I wanted to build something both challenging (for my skill level) and fun to play. RA doesn't just test your reactions, it improves them with continued play (I should definitely conduct tests before saying that, but who cares!). 
 
-![Reactoin Arrow landing page](~/Desktop/reactionarrow.png)
+## Use
+
+Start by reading the instructions of RA (access by clicking the left arrow on the landing page).
+
+When you're ready to play, click the down arrow on the landing page and the game will begin immediately.
+
+When the time runs out, you will see your score.
+
+© Shawn Hassen
+
+
