@@ -9,11 +9,9 @@ As a new developer, I wanted to build something both challenging (for my skill l
 
 ## Use
 
-Start by reading the instructions of RA (access by clicking the left arrow on the landing page).
-
-When you're ready to play, click the down arrow on the landing page and the game will begin immediately.
-
-When the time runs out, you will see your score.
+1. Start by reading the instructions of RA (access by clicking the left arrow on the landing page).
+2. When you're ready to play, click the down arrow on the landing page and the game will begin immediately.
+3. When the time runs out, you will see your score.
 
 © Shawn Hassen
 
