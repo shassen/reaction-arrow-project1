@@ -10,7 +10,7 @@ const arrowArr = [ { whiteUp: '../images/uparrow.png', redUp: '../images/redupar
 const arrowCount = document.querySelectorAll('.arrows');
 for (let i = 0; i < arrowCount.length; i += 1) {
     arrowCount[i].addEventListener('click', (e) => {
-        console.log(e.target);
+        // console.log(e.target);
     });
 }
 
@@ -52,17 +52,17 @@ startSpan.onclick = function() {
     footer.style.opacity = "1";
 }
 
-const rightRed = arrowArr.redRight;
-const startBody = document.querySelector('#start-body');
-rightArrow.addEventListener('click', (e) => {
+// const rightRed = arrowArr.redRight;
+// const startBody = document.querySelector('#start-body');
+// rightArrow.addEventListener('click', (e) => {
     // window.xxxx to handle default behavior of directional keys
     // e.preventDefault();
-    console.log(e.target);
-    timeInterval = setInterval(countdown, 1000)
-    startWindow.style.display = "block";
-    rootDiv.style.opacity = "0";
-    footer.style.opacity = "0";
-});
+    // console.log(e.target);
+    // timeInterval = setInterval(countdown, 1000)
+    // startWindow.style.display = "block";
+    // rootDiv.style.opacity = "0";
+    // footer.style.opacity = "0";
+// });
 
 
 // Reaction Arrow Game:
